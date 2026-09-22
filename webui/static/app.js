@@ -24,7 +24,7 @@ const ACCEPTED_EXT = ["png", "jpg", "jpeg", "bmp", "tif", "tiff", "webp"];
 // The frontend never invents results: if the API is unreachable it says so.
 const BACKEND_OFFLINE = "The inference backend is not connected on this hosted demo. " +
   "Analysis is not faked, so nothing runs here. Locally, start it with python app_webui.py.";
-const isOfflineError = (res) => !res || res.status === 404 || res.status === 502;
+const isOfflineError = (res) => !res || res.status === 404 || res.status === 405 || res.status === 502;
 
 const badge = (cls) => {
   const m = CLASS_META[cls] || { color: "#64748B", friendly: cls };
