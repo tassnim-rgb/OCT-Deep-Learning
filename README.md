@@ -113,7 +113,7 @@ routing, relative asset paths, and a `.nojekyll` marker, so it deploys to any
 GitHub Pages project URL with no build step. The workflow
 `.github/workflows/pages.yml` deploys `webui/static/` on every push to `main`.
 
-**Live demo: `https://GITHUB_USERNAME.github.io/OCT-Deep-Learning/`**
+**Live demo: `https://tassnim-rgb.github.io/OCT-Deep-Learning/`**
 
 **The hosted demo is frontend-only and intentional.** OCT inference needs the
 PyTorch pipeline and the trained weights, which live on the local machine and
