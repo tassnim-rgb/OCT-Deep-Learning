@@ -134,7 +134,7 @@ function renderHome() {
         <p class="hero-note">Research prototype · from-scratch deep learning · no API keys needed</p>
       </div>
       <div class="oct-visual" aria-hidden="true">
-        <img src="static/assets/hero-scene.svg" alt="">
+        <img src="assets/hero-scene.svg" alt="">
         <span class="scan-line"></span>
         <p class="oct-caption">Stylized OCT B-scan illustration</p>
       </div>

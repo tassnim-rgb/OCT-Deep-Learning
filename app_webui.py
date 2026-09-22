@@ -6,7 +6,7 @@ code, no new dependencies (stdlib http.server + email parsing).
 
 Endpoints
     GET  /                → webui/static/index.html
-    GET  /static/<path>   → static assets
+    GET  /<asset>         → files directly under webui/static/ (and /static/<path>)
     POST /api/analyze     → multipart upload (field "file") → analysis result
     GET  /api/history     → recent analyses (metadata only)
     GET  /api/result?id=  → full stored result for one id
@@ -176,6 +176,11 @@ class Handler(BaseHTTPRequestHandler):
             self._send_file(STATIC_DIR / "index.html", "text/html; charset=utf-8")
         elif path.startswith("/static/"):
             rel = path[len("/static/"):]
+        elif not path.startswith("/api/"):
+            rel = path.lstrip("/")
+        else:
+            rel = None
+        if rel is not None:
             target = (STATIC_DIR / rel).resolve()
             if not str(target).startswith(str(STATIC_DIR.resolve())):
                 self._send_json({"error": "forbidden"}, 403)
