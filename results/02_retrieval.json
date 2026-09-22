@@ -1,0 +1,28 @@
+{
+  "corpus_entries": 133,
+  "vocab_size": 784,
+  "saved_checkpoint_on_xl": {
+    "p1": 0.8125,
+    "p3": 0.8125,
+    "per_class_p1": {
+      "CNV": 100.0,
+      "DME": 50.0,
+      "DRUSEN": 75.0,
+      "NORMAL": 100.0
+    },
+    "n_queries": 16
+  },
+  "fresh_xl_trained": {
+    "p1": 0.8125,
+    "p3": 0.8125,
+    "per_class_p1": {
+      "CNV": 100.0,
+      "DME": 50.0,
+      "DRUSEN": 75.0,
+      "NORMAL": 100.0
+    },
+    "n_queries": 16
+  },
+  "improvement_p1_pp": 0.0,
+  "best_loss": 1.9295
+}

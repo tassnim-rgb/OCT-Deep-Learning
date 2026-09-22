@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OCT Workbench · Retinal OCT analysis</title>
+  <meta name="description" content="Research tool for analyzing retinal OCT scans with a from-scratch deep learning model: prediction, confidence, Grad-CAM localization, and reference notes.">
+  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><circle cx="16" cy="16" r="13" fill="none" stroke="%230E7490" stroke-width="2" opacity=".4"/><circle cx="16" cy="16" r="7" fill="none" stroke="%230E7490" stroke-width="2"/><circle cx="16" cy="16" r="2.4" fill="%230E7490"/></svg>'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#app">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#/">
+        <svg class="brand-mark" width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <circle cx="16" cy="16" r="13" stroke="currentColor" stroke-width="1.5" opacity=".32"/>
+          <circle cx="16" cy="16" r="7.5" stroke="currentColor" stroke-width="1.6" opacity=".7"/>
+          <circle cx="16" cy="16" r="2" fill="var(--accent)"/>
+          <line x1="5" y1="16" x2="11" y2="16" stroke="var(--accent)" stroke-width="1.6"/>
+          <line x1="21" y1="16" x2="27" y2="16" stroke="var(--accent)" stroke-width="1.6"/>
+        </svg>
+        <span class="brand-name">OCT Workbench</span>
+        <span class="brand-tag">retinal OCT research</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-link" href="#/" data-nav="home">Home</a>
+        <a class="btn btn-primary btn-sm" href="#/analyze">Analyze a scan</a>
+      </nav>
+      <button id="theme-toggle" class="icon-btn" type="button"
+              title="Toggle dark / light" aria-label="Toggle dark / light theme">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.4"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5 5l2.1 2.1M16.9 16.9L19 19M19 5l-2.1 2.1M7.1 16.9L5 19"/>
+        </svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11Z"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="disclaimer">
+        <strong>Research prototype. Not clinically validated.</strong>
+        Predictions, heatmaps and reference notes are produced by models trained
+        for research purposes and must not be used for diagnosis. Always consult
+        a qualified eye care professional about your eye health.
+      </p>
+      <p class="techline">OCT Workbench · inference powered by the <code>octnet</code> pipeline
+        (from-scratch OCTNet classifier, Grad-CAM++, guarded zoom-and-reanalyze,
+        contrastive retrieval) · no API keys required. <strong>Hosted demo is frontend only:
+        OCT inference runs on the local Python backend (<code>python app_webui.py</code>).</strong></p>
+    </div>
+  </footer>
+
+  <script src="static/app.js" defer></script>
+</body>
+</html>

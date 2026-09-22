@@ -1,0 +1,534 @@
+[
+ {
+  "label": "CNV",
+  "text": "Choroidal neovascularization (CNV) refers to the growth of new, abnormal blood vessels from the choroid through Bruch's membrane into the sub-retinal pigment epithelial or subretinal space."
+ },
+ {
+  "label": "CNV",
+  "text": "On OCT, CNV typically presents as a hyperreflective irregular lesion beneath the RPE, often associated with subretinal fluid and disruption of the ellipsoid zone."
+ },
+ {
+  "label": "CNV",
+  "text": "Subretinal fluid appearing as a hyporeflective space between the neurosensory retina and RPE is a hallmark of active CNV."
+ },
+ {
+  "label": "CNV",
+  "text": "Type 1 CNV (occult) grows beneath the RPE, producing a pigment epithelial detachment visible as a dome-shaped elevation of the RPE on OCT."
+ },
+ {
+  "label": "CNV",
+  "text": "Type 2 CNV (classic) grows through the RPE into the subretinal space, appearing as a hyperreflective lesion above the RPE layer."
+ },
+ {
+  "label": "CNV",
+  "text": "Type 3 CNV, also called retinal angiomatous proliferation, originates from the deep retinal capillary plexus and grows downward toward the RPE."
+ },
+ {
+  "label": "CNV",
+  "text": "Intraretinal fluid cysts in combination with sub-RPE material strongly suggest neovascular AMD with active CNV."
+ },
+ {
+  "label": "CNV",
+  "text": "Anti-VEGF therapy is the standard of care for CNV, targeting vascular endothelial growth factor to suppress new vessel growth and reduce exudation."
+ },
+ {
+  "label": "CNV",
+  "text": "Irregular RPE elevation with overlying intraretinal or subretinal fluid on OCT is highly suggestive of CNV requiring prompt treatment."
+ },
+ {
+  "label": "CNV",
+  "text": "A fibrovascular pigment epithelial detachment shows a shallow, irregular RPE elevation with heterogeneous internal reflectivity, distinguishing it from a serous PED."
+ },
+ {
+  "label": "CNV",
+  "text": "Subretinal hyperreflective material on OCT represents fibrin, blood, or fibrosis associated with active or healing CNV lesions."
+ },
+ {
+  "label": "CNV",
+  "text": "Polypoidal choroidal vasculopathy, a CNV variant, shows notched or multilobular PEDs on OCT corresponding to polypoidal lesions on indocyanine green angiography."
+ },
+ {
+  "label": "CNV",
+  "text": "Persistent subretinal fluid despite anti-VEGF therapy may indicate treatment-resistant CNV or a tachyphylaxis response requiring switch in agent."
+ },
+ {
+  "label": "CNV",
+  "text": "Disruption of the external limiting membrane and ellipsoid zone overlying a CNV lesion correlates with poorer visual prognosis even after fluid resolution."
+ },
+ {
+  "label": "CNV",
+  "text": "Subretinal fluid in CNV is typically optically clear and located between the photoreceptor outer segments and the RPE, distinct from intraretinal cystic fluid."
+ },
+ {
+  "label": "CNV",
+  "text": "A flat irregular PED with shaggy or undulating contour on OCT is a classic sign of CNV rather than simple drusenoid PED."
+ },
+ {
+  "label": "CNV",
+  "text": "Double-layer sign on OCT, where a shallow irregular RPE elevation parallels a hyperreflective band, suggests a non-exudative or quiescent CNV."
+ },
+ {
+  "label": "CNV",
+  "text": "Hemorrhagic PED appears as a dome-shaped RPE elevation with markedly hyperreflective, dense internal contents obscuring underlying choroidal detail."
+ },
+ {
+  "label": "CNV",
+  "text": "Loss of the normal foveal contour combined with cystic intraretinal fluid and subretinal fluid indicates significant exudative activity from CNV."
+ },
+ {
+  "label": "CNV",
+  "text": "Treat-and-extend regimens for CNV use OCT-detected fluid as the primary biomarker to titrate the interval between anti-VEGF injections."
+ },
+ {
+  "label": "CNV",
+  "text": "Myopic CNV occurs in highly myopic eyes and appears as a small, dome-shaped hyperreflective subretinal lesion, often without significant fluid."
+ },
+ {
+  "label": "CNV",
+  "text": "Idiopathic CNV in younger patients without drusen or AMD risk factors may present similarly to AMD-related CNV but typically responds well to limited anti-VEGF treatment."
+ },
+ {
+  "label": "CNV",
+  "text": "Recurrent CNV activity after a quiescent period often manifests first as new intraretinal cystic fluid on OCT before subjective vision changes occur."
+ },
+ {
+  "label": "CNV",
+  "text": "A notched or peaked PED contour on OCT, sometimes called the thumb sign, can indicate an underlying polypoidal lesion in polypoidal choroidal vasculopathy."
+ },
+ {
+  "label": "CNV",
+  "text": "Pachychoroid neovasculopathy is a CNV subtype associated with thickened choroid and dilated Haller layer vessels, often without typical drusen."
+ },
+ {
+  "label": "CNV",
+  "text": "Quantification of subretinal and intraretinal fluid volume on OCT is used in clinical trials as a continuous outcome measure for anti-VEGF efficacy in CNV."
+ },
+ {
+  "label": "CNV",
+  "text": "Active CNV lesions often show intraretinal hyperreflective dots adjacent to the area of subretinal fluid, representing migrating inflammatory or RPE cells."
+ },
+ {
+  "label": "CNV",
+  "text": "Macular atrophy can develop as a late complication of chronic or recurrent CNV, appearing on OCT as thinning and hypertransmission through the outer retina and RPE."
+ },
+ {
+  "label": "CNV",
+  "text": "Subfoveal CNV carries a worse visual prognosis than extrafoveal CNV due to direct involvement of the photoreceptor layer responsible for central vision."
+ },
+ {
+  "label": "CNV",
+  "text": "A shallow irregular RPE elevation overlying a markedly thickened choroid, without classic drusen, suggests pachychoroid-associated CNV rather than typical AMD-related CNV."
+ },
+ {
+  "label": "CNV",
+  "text": "OCT angiography can directly visualize the abnormal neovascular network within a CNV lesion without requiring dye-based angiography."
+ },
+ {
+  "label": "CNV",
+  "text": "Vitreous hemorrhage may rarely complicate aggressive CNV lesions, appearing as diffuse hyperreflective material obscuring the view of underlying retinal structures on OCT."
+ },
+ {
+  "label": "CNV",
+  "text": "Combination therapy with anti-VEGF and photodynamic therapy is sometimes used for polypoidal choroidal vasculopathy lesions resistant to anti-VEGF monotherapy."
+ },
+ {
+  "label": "CNV",
+  "text": "Geographic atrophy can coexist with treated CNV, appearing on OCT as sharply demarcated areas of outer retinal and RPE loss adjacent to the fibrotic neovascular scar."
+ },
+ {
+  "label": "CNV",
+  "text": "A disciform scar represents the end-stage fibrotic outcome of chronic CNV, appearing on OCT as a dense, organized hyperreflective subretinal mass without active fluid."
+ },
+ {
+  "label": "DME",
+  "text": "Diabetic macular edema (DME) is characterized by intraretinal fluid accumulation in the macula secondary to breakdown of the inner blood-retinal barrier."
+ },
+ {
+  "label": "DME",
+  "text": "OCT in DME shows retinal thickening with hyporeflective intraretinal cystic spaces, most prominent in the outer plexiform and inner nuclear layers."
+ },
+ {
+  "label": "DME",
+  "text": "Center-involved DME refers to edema affecting the central 1mm subfield of the macula, which is the primary target for treatment decisions."
+ },
+ {
+  "label": "DME",
+  "text": "Hard exudates appear as discrete hyperreflective foci with posterior shadowing on OCT and indicate lipid deposition from chronic vascular leakage in DME."
+ },
+ {
+  "label": "DME",
+  "text": "Diffuse retinal thickening without distinct cysts, sometimes described as sponge-like swelling, is a common OCT pattern in early or mild DME."
+ },
+ {
+  "label": "DME",
+  "text": "Vitreomacular traction may exacerbate DME, with OCT showing posterior hyaloid attachment and tractional elevation of the retinal surface."
+ },
+ {
+  "label": "DME",
+  "text": "Anti-VEGF injections and corticosteroid implants are first-line treatments for center-involving DME associated with vision loss."
+ },
+ {
+  "label": "DME",
+  "text": "Ellipsoid zone disruption in DME on OCT correlates with photoreceptor damage and predicts worse visual acuity outcomes after treatment."
+ },
+ {
+  "label": "DME",
+  "text": "Cystoid macular edema in DME produces large, well-demarcated hyporeflective cystic spaces predominantly in the inner nuclear and outer plexiform layers."
+ },
+ {
+  "label": "DME",
+  "text": "Subretinal fluid can also accompany DME in more severe cases, appearing as a hyporeflective space beneath the neurosensory retina without RPE elevation."
+ },
+ {
+  "label": "DME",
+  "text": "Disorganization of the retinal inner layers, where boundaries between ganglion cell, inner plexiform, and inner nuclear layers become indistinct, predicts poor visual recovery in chronic DME."
+ },
+ {
+  "label": "DME",
+  "text": "Central subfield thickness measured by OCT is the standard quantitative metric used to track DME severity and treatment response over time."
+ },
+ {
+  "label": "DME",
+  "text": "Microaneurysms appear on OCT as small round hyperreflective structures, often located adjacent to areas of intraretinal cystic fluid in DME."
+ },
+ {
+  "label": "DME",
+  "text": "Epiretinal membrane formation can coexist with DME, appearing as a thin hyperreflective line on the retinal surface that may contribute to tractional edema."
+ },
+ {
+  "label": "DME",
+  "text": "Severe non-proliferative or proliferative diabetic retinopathy with DME may show OCT evidence of preretinal hemorrhage or fibrovascular proliferation at the vitreoretinal interface."
+ },
+ {
+  "label": "DME",
+  "text": "Resolution of intraretinal cysts on OCT following anti-VEGF therapy is the primary structural endpoint used to gauge treatment response in DME trials."
+ },
+ {
+  "label": "DME",
+  "text": "Focal laser photocoagulation is reserved for non-center-involving DME with focal leakage points identified on fluorescein angiography, correlated with OCT thickening."
+ },
+ {
+  "label": "DME",
+  "text": "Large cystoid spaces spanning the full retinal thickness, sometimes with bridging septae, indicate chronic and severe DME with guarded visual prognosis."
+ },
+ {
+  "label": "DME",
+  "text": "Foveal bulge or loss of the normal foveal depression on OCT indicates significant central edema even before symptomatic vision loss in DME."
+ },
+ {
+  "label": "DME",
+  "text": "Intravitreal corticosteroid implants such as dexamethasone are particularly effective for DME with a significant inflammatory component evidenced by hyperreflective foci."
+ },
+ {
+  "label": "DME",
+  "text": "Hyperreflective foci scattered within the retinal layers on OCT in DME are thought to represent activated microglia or lipid-laden macrophages indicating inflammation."
+ },
+ {
+  "label": "DME",
+  "text": "Serous retinal detachment in DME is distinguished from CNV-related subretinal fluid by the absence of any associated RPE elevation or sub-RPE material."
+ },
+ {
+  "label": "DME",
+  "text": "Outer retinal layer disruption combined with large cystic spaces on OCT in DME is associated with reduced likelihood of visual acuity improvement despite anatomic resolution."
+ },
+ {
+  "label": "DME",
+  "text": "Recurrent DME after treatment discontinuation typically reappears first as subtle outer plexiform layer thickening before progressing to visible cysts."
+ },
+ {
+  "label": "DME",
+  "text": "Diabetic papillopathy, occasionally associated with severe DME, can show optic disc edema on OCT in addition to macular thickening."
+ },
+ {
+  "label": "DME",
+  "text": "Macular ischemia, identified by enlargement of the foveal avascular zone, frequently coexists with DME and limits the visual benefit achievable from edema resolution alone."
+ },
+ {
+  "label": "DME",
+  "text": "Intraretinal cysts in early DME are often small and confined to a single layer, while advanced DME shows multilayer cystic involvement spanning the full retinal thickness."
+ },
+ {
+  "label": "DME",
+  "text": "Pseudophakic cystoid macular edema can mimic DME on OCT but typically arises following cataract surgery and has a different underlying inflammatory mechanism."
+ },
+ {
+  "label": "DME",
+  "text": "Combination anti-VEGF and steroid therapy may be considered for DME eyes with mixed vascular and inflammatory components evident on OCT."
+ },
+ {
+  "label": "DME",
+  "text": "Photoreceptor outer segment length, measured between the ellipsoid zone and the RPE on OCT, is reduced in eyes with chronic DME and correlates with visual function."
+ },
+ {
+  "label": "DME",
+  "text": "Spontaneous resolution of mild DME can occur in a subset of patients with well-controlled systemic glycemia, observable as gradual thinning on serial OCT scans."
+ },
+ {
+  "label": "DRUSEN",
+  "text": "Drusen are extracellular deposits beneath the retinal pigment epithelium, composed of lipids, proteins, and cellular debris, and are the hallmark of early and intermediate age-related macular degeneration."
+ },
+ {
+  "label": "DRUSEN",
+  "text": "On OCT, soft drusen appear as dome-shaped, medium-reflective elevations of the RPE with a distinct base and apex, without overlying retinal fluid."
+ },
+ {
+  "label": "DRUSEN",
+  "text": "Hard drusen are small, discrete, and hyperreflective on OCT; they carry low risk of progression to advanced AMD compared to soft or confluent drusen."
+ },
+ {
+  "label": "DRUSEN",
+  "text": "Drusen volume and area measured on OCT are quantitative biomarkers used to stratify the risk of progression from intermediate to late AMD."
+ },
+ {
+  "label": "DRUSEN",
+  "text": "Subretinal drusenoid deposits, also called reticular pseudodrusen, appear as hyperreflective material above the RPE rather than beneath it, and are associated with increased AMD progression risk."
+ },
+ {
+  "label": "DRUSEN",
+  "text": "Drusen regression, defined as a reduction in drusen volume over time, paradoxically precedes RPE atrophy in advanced dry AMD rather than indicating improvement."
+ },
+ {
+  "label": "DRUSEN",
+  "text": "The presence of large soft drusen exceeding 125 micrometers in diameter, combined with pigmentary changes, substantially increases the 5-year risk of progression to neovascular or atrophic AMD."
+ },
+ {
+  "label": "DRUSEN",
+  "text": "Outer retinal tubulations adjacent to drusen on OCT indicate photoreceptor degeneration and emerging RPE atrophy in geographic atrophy."
+ },
+ {
+  "label": "DRUSEN",
+  "text": "Confluent drusen, where multiple individual deposits merge into a continuous undulating elevation of the RPE, indicate more advanced intermediate AMD with higher progression risk."
+ },
+ {
+  "label": "DRUSEN",
+  "text": "Hyporeflective cores within drusen on OCT, sometimes called drusen cores, are associated with increased likelihood of progression to geographic atrophy."
+ },
+ {
+  "label": "DRUSEN",
+  "text": "Calcified drusen appear as highly hyperreflective, well-demarcated deposits with posterior shadowing and are a risk factor for impending RPE atrophy."
+ },
+ {
+  "label": "DRUSEN",
+  "text": "Cuticular drusen, a distinct subtype occurring in younger patients, appear as numerous small, uniform, dome-shaped elevations producing a characteristic starry sky pattern on OCT en face imaging."
+ },
+ {
+  "label": "DRUSEN",
+  "text": "Pigment epithelial detachments composed primarily of drusenoid material show a homogeneous medium-reflective internal signal, distinguishing them from the heterogeneous signal of a fibrovascular PED."
+ },
+ {
+  "label": "DRUSEN",
+  "text": "Hyperreflective foci overlying drusen on OCT represent migrating RPE cells and are an early biomarker for impending atrophy in that location."
+ },
+ {
+  "label": "DRUSEN",
+  "text": "AREDS2 formulation supplements containing antioxidants, zinc, and lutein/zeaxanthin are recommended for patients with intermediate AMD and large drusen to slow progression."
+ },
+ {
+  "label": "DRUSEN",
+  "text": "Drusenoid pigment epithelial detachment is defined on OCT as a broad, shallow RPE elevation greater than 350 micrometers wide caused by confluent drusen material."
+ },
+ {
+  "label": "DRUSEN",
+  "text": "Loss of the RPE band integrity overlying a drusenoid PED, combined with adjacent photoreceptor loss, indicates early transition toward geographic atrophy."
+ },
+ {
+  "label": "DRUSEN",
+  "text": "Drusen are typically bilateral and symmetric in distribution, which helps distinguish age-related drusen from unilateral pseudodrusen patterns seen in other conditions."
+ },
+ {
+  "label": "DRUSEN",
+  "text": "Basal laminar drusen, a variant seen in younger patients, show as small uniform sawtooth-pattern elevations of the RPE on OCT cross-section."
+ },
+ {
+  "label": "DRUSEN",
+  "text": "Choroidal thinning beneath areas of extensive drusen on OCT may be an early structural change preceding clinically visible geographic atrophy."
+ },
+ {
+  "label": "DRUSEN",
+  "text": "The absence of intraretinal or subretinal fluid is a key OCT feature distinguishing simple drusen from drusen complicated by early exudative CNV."
+ },
+ {
+  "label": "DRUSEN",
+  "text": "Nascent geographic atrophy, an OCT-defined precursor lesion, shows subsidence of the outer plexiform and inner nuclear layers overlying drusen with hyporeflective wedge-shaped changes."
+ },
+ {
+  "label": "DRUSEN",
+  "text": "Reticular pseudodrusen are best visualized on near-infrared reflectance imaging as a network of interlacing ribbon-like lesions, corresponding to discrete hyperreflective deposits above the RPE on OCT cross-section."
+ },
+ {
+  "label": "DRUSEN",
+  "text": "Drusen distribution patterns differ by location: macular drusen confer higher AMD progression risk than peripheral drusen, which are more often age-related without pathologic significance."
+ },
+ {
+  "label": "DRUSEN",
+  "text": "Complete RPE and outer retinal atrophy, the OCT-defined endpoint of geographic atrophy, shows increased signal hypertransmission into the choroid due to loss of the overlying RPE."
+ },
+ {
+  "label": "DRUSEN",
+  "text": "Incomplete RPE and outer retinal atrophy represents an intermediate OCT stage between intact drusen and complete atrophy, characterized by partial RPE attenuation without frank hypertransmission."
+ },
+ {
+  "label": "DRUSEN",
+  "text": "Multiple coalescing drusen with overlying photoreceptor disruption but without fluid should prompt close monitoring for early conversion to either atrophic or neovascular AMD."
+ },
+ {
+  "label": "NORMAL",
+  "text": "A normal OCT macula shows a smooth foveal contour with a central pit, distinct retinal layers, an intact ellipsoid zone, and no fluid or drusen."
+ },
+ {
+  "label": "NORMAL",
+  "text": "The normal foveal avascular zone appears as a central depression on OCT with thinning of the inner retinal layers and preservation of the outer retinal bands."
+ },
+ {
+  "label": "NORMAL",
+  "text": "In a healthy retina, the RPE and Bruch's membrane complex appears as a continuous, uniformly hyperreflective band without elevations or disruptions."
+ },
+ {
+  "label": "NORMAL",
+  "text": "Normal central subfield thickness on OCT is approximately 250 to 270 micrometers in women and 270 to 290 micrometers in men on spectral-domain OCT."
+ },
+ {
+  "label": "NORMAL",
+  "text": "The ellipsoid zone, previously called the inner segment/outer segment junction, appears as a bright, continuous hyperreflective line in the normal outer retina."
+ },
+ {
+  "label": "NORMAL",
+  "text": "Normal OCT shows no intraretinal cysts, no subretinal fluid, no RPE elevations, and no hyperreflective foci indicative of pathology."
+ },
+ {
+  "label": "NORMAL",
+  "text": "The inner segment/outer segment junction and the cone outer segment tip line are both visible and intact in a normal healthy macula."
+ },
+ {
+  "label": "NORMAL",
+  "text": "Age-related thinning of the retinal nerve fiber layer on OCT is a normal physiologic finding and should be distinguished from pathologic glaucomatous loss."
+ },
+ {
+  "label": "NORMAL",
+  "text": "A normal foveal contour displays a gradual, symmetric depression without abrupt elevations, irregularities, or flattening of the central pit."
+ },
+ {
+  "label": "NORMAL",
+  "text": "The external limiting membrane appears as a thin, continuous hyperreflective line just above the ellipsoid zone in a structurally normal retina."
+ },
+ {
+  "label": "NORMAL",
+  "text": "Normal choroidal thickness varies by age and axial length but typically ranges from 250 to 350 micrometers in the subfoveal region in healthy adults."
+ },
+ {
+  "label": "NORMAL",
+  "text": "The posterior vitreous in a normal young eye remains attached to the retinal surface without evidence of traction, detachment, or epiretinal membrane formation."
+ },
+ {
+  "label": "NORMAL",
+  "text": "All nine standard retinal layers, from the nerve fiber layer to the RPE, are clearly delineated and uniformly reflective in a normal OCT scan."
+ },
+ {
+  "label": "NORMAL",
+  "text": "No pigment epithelial detachment, drusen, or sub-RPE deposits are present in a structurally and functionally normal macula on OCT."
+ },
+ {
+  "label": "NORMAL",
+  "text": "A normal OCT angiogram, when available, shows an intact and regular foveal avascular zone without areas of capillary nonperfusion or neovascular flow."
+ },
+ {
+  "label": "NORMAL",
+  "text": "Symmetric retinal thickness between the two eyes, in the absence of high refractive error or prior pathology, is expected in a normal OCT examination."
+ },
+ {
+  "label": "NORMAL",
+  "text": "The optic nerve head and peripapillary retinal nerve fiber layer thickness fall within established normative age-adjusted ranges in a healthy eye."
+ },
+ {
+  "label": "NORMAL",
+  "text": "Mild physiologic cupping of the optic disc on OCT, without focal notching or progressive nerve fiber layer thinning, is a normal anatomic variant."
+ },
+ {
+  "label": "NORMAL",
+  "text": "A normal vitreomacular interface shows no adhesion, traction, or membrane formation, with a clear separation between the posterior hyaloid and the internal limiting membrane."
+ },
+ {
+  "label": "NORMAL",
+  "text": "Normal photoreceptor outer segment length is consistent across the macula in a healthy eye, without focal shortening or disruption near the fovea."
+ },
+ {
+  "label": "NORMAL",
+  "text": "In emmetropic or mildly ametropic normal eyes, the retinal layers maintain consistent thickness and reflectivity from the fovea to the perifoveal region."
+ },
+ {
+  "label": "NORMAL",
+  "text": "A normal scan shows uniform choroidal reflectivity without focal thinning, thickening, or the dilated outer choroidal vessels seen in pachychoroid spectrum disease."
+ },
+ {
+  "label": "DIFFERENTIAL",
+  "text": "Unlike DME, subretinal fluid in CNV originates beneath the RPE rather than within retinal layers, and is not typically associated with diabetic vascular changes."
+ },
+ {
+  "label": "DIFFERENTIAL",
+  "text": "Unlike CNV, intraretinal cysts in DME are distributed across multiple retinal layers and correlate with vascular leakage seen on fluorescein angiography in diabetic patients."
+ },
+ {
+  "label": "DIFFERENTIAL",
+  "text": "Unlike CNV, simple drusen do not produce overlying intraretinal or subretinal fluid unless neovascularization has developed secondarily."
+ },
+ {
+  "label": "DIFFERENTIAL",
+  "text": "Unlike DME cystic spaces, drusen are located beneath the RPE and do not cause thickening or cystic change above the RPE layer."
+ },
+ {
+  "label": "DIFFERENTIAL",
+  "text": "Distinguishing CNV from drusen on OCT: CNV produces subretinal fluid and an irregular RPE elevation, whereas drusen cause smooth, regular RPE undulations without fluid."
+ },
+ {
+  "label": "DIFFERENTIAL",
+  "text": "A serous PED from CNV typically shows a smooth dome-shaped elevation with optically empty internal reflectivity, whereas a drusenoid PED shows medium internal reflectivity from solid material."
+ },
+ {
+  "label": "DIFFERENTIAL",
+  "text": "DME cysts are typically round and well-circumscribed within retinal layers, while CNV-associated subretinal fluid is a flatter, more diffuse space beneath the photoreceptors."
+ },
+ {
+  "label": "DIFFERENTIAL",
+  "text": "Normal age-related foveal thinning should not be confused with pathologic atrophy; the former preserves all retinal layers while the latter shows loss of the RPE and photoreceptor bands."
+ },
+ {
+  "label": "DIFFERENTIAL",
+  "text": "Vitreomacular traction can mimic DME by causing retinal thickening, but is distinguished by visible posterior hyaloid attachment and the absence of true intraretinal cystic fluid."
+ },
+ {
+  "label": "DIFFERENTIAL",
+  "text": "Pseudodrusen differ from conventional drusen in that they are located above the RPE rather than beneath it, appearing as a hyperreflective layer overlying an otherwise intact RPE band."
+ },
+ {
+  "label": "DIFFERENTIAL",
+  "text": "CNV occurring in a previously drusen-laden eye should be suspected when new intraretinal or subretinal fluid appears adjacent to pre-existing drusen on follow-up OCT."
+ },
+ {
+  "label": "DIFFERENTIAL",
+  "text": "Diabetic patients with concurrent AMD may show both DME-pattern intraretinal cysts and drusen on the same OCT scan, requiring careful layer-by-layer differentiation of each finding."
+ },
+ {
+  "label": "DIFFERENTIAL",
+  "text": "Cystoid macular edema can arise from DME, CNV, or postsurgical inflammation; the surrounding OCT context, such as presence of drusen or diabetic microaneurysms, helps distinguish the underlying cause."
+ },
+ {
+  "label": "DIFFERENTIAL",
+  "text": "A normal scan and an early drusen-only scan can appear similar at low magnification; the key distinguishing feature is any RPE elevation, however subtle, which is absent in a truly normal macula."
+ },
+ {
+  "label": "DIFFERENTIAL",
+  "text": "Subretinal hyperreflective material is seen in active CNV but not in uncomplicated DME or simple drusen, making it a useful discriminating feature on OCT."
+ },
+ {
+  "label": "DIFFERENTIAL",
+  "text": "Hard exudates in DME are hyperreflective with posterior shadowing similar to calcified drusen, but their distribution within retinal layers rather than beneath the RPE distinguishes the two."
+ },
+ {
+  "label": "DIFFERENTIAL",
+  "text": "Geographic atrophy from advanced dry AMD and outer retinal atrophy from chronic resolved DME can both show hypertransmission on OCT, but differ in the pattern of antecedent findings such as drusen versus diabetic microvascular changes."
+ },
+ {
+  "label": "DIFFERENTIAL",
+  "text": "Disorganization of retinal inner layers is a feature specific to chronic DME and is not typically seen in CNV or drusen-only eyes, helping localize chronicity of diabetic disease."
+ }
+]

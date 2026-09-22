@@ -1,0 +1,27 @@
+{
+  "saved": {
+    "p1": 0.8125,
+    "p3": 0.8125,
+    "per_class_p1": {
+      "CNV": 100.0,
+      "DME": 50.0,
+      "DRUSEN": 75.0,
+      "NORMAL": 100.0
+    }
+  },
+  "augmented": {
+    "p1": 0.625,
+    "p3": 0.9375,
+    "per_class_p1": {
+      "CNV": 25.0,
+      "DME": 50.0,
+      "DRUSEN": 75.0,
+      "NORMAL": 100.0
+    },
+    "best_loss": 0.2567263960838318,
+    "n_pairs": 1330,
+    "n_augmented": 1330
+  },
+  "filtered_p1_augmented": 1.0,
+  "artifact": "/home/nebula/projects/results/retrieval_encoder_xl_v2.pth"
+}

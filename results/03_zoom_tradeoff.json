@@ -1,0 +1,83 @@
+{
+  "kermany_classifier_only": {
+    "accuracy": 0.997,
+    "macro_f1": 0.997
+  },
+  "kermany_zoom": {
+    "baseline": {
+      "accuracy": 0.423,
+      "macro_f1": 0.3688,
+      "skip_rate": 0.0,
+      "disagreement_rate": 0.576,
+      "n_zoom_called": 1000
+    },
+    "guarded": {
+      "accuracy": 0.997,
+      "macro_f1": 0.997,
+      "skip_rate": 0.999,
+      "disagreement_rate": 0.0,
+      "n_zoom_called": 1
+    },
+    "margin": {
+      "accuracy": 0.997,
+      "macro_f1": 0.997,
+      "skip_rate": 0.999,
+      "disagreement_rate": 0.0,
+      "n_zoom_called": 1
+    }
+  },
+  "octc8_classifier_only": {
+    "accuracy": 0.9843,
+    "macro_f1": 0.9843
+  },
+  "octc8_zoom": {
+    "baseline": {
+      "accuracy": 0.4043,
+      "macro_f1": 0.3564,
+      "skip_rate": 0.0,
+      "disagreement_rate": 0.5929,
+      "n_zoom_called": 1400
+    },
+    "guarded": {
+      "accuracy": 0.9836,
+      "macro_f1": 0.9836,
+      "skip_rate": 0.9971,
+      "disagreement_rate": 0.0014,
+      "n_zoom_called": 4
+    },
+    "margin": {
+      "accuracy": 0.9836,
+      "macro_f1": 0.9836,
+      "skip_rate": 0.9971,
+      "disagreement_rate": 0.0014,
+      "n_zoom_called": 4
+    }
+  },
+  "octid_classifier_only": {
+    "accuracy": 0.7427,
+    "macro_f1": 0.6007
+  },
+  "octid_zoom": {
+    "baseline": {
+      "accuracy": 0.3404,
+      "macro_f1": 0.2696,
+      "skip_rate": 0.0,
+      "disagreement_rate": 0.501,
+      "n_zoom_called": 517
+    },
+    "guarded": {
+      "accuracy": 0.7408,
+      "macro_f1": 0.5981,
+      "skip_rate": 0.9768,
+      "disagreement_rate": 0.0077,
+      "n_zoom_called": 12
+    },
+    "margin": {
+      "accuracy": 0.7408,
+      "macro_f1": 0.5981,
+      "skip_rate": 0.9768,
+      "disagreement_rate": 0.0077,
+      "n_zoom_called": 12
+    }
+  }
+}

@@ -1,0 +1,25 @@
+# OCT agentic diagnostic pipeline — runtime
+torch>=2.5
+torchvision>=0.20
+numpy
+scikit-learn
+Pillow
+matplotlib
+seaborn
+pandas
+tqdm
+gradio>=5,<7
+
+# OCT Workbench web UI (app_webui.py + webui/static/) needs nothing extra:
+# the API server uses only the standard library and octnet/predict.py.
+
+# optional — LLM agent orchestration (Tool 5). Requires exactly one backend:
+# any OpenAI-compatible endpoint. Without a key the agent falls back to the
+# deterministic offline pipeline.
+cerebras-cloud-sdk>=0.1
+openai>=1.0
+
+# optional — used only by the legacy build_kb_index.ipynb (abandoned MiniLM+FAISS
+# approach). Not required for the pipeline.
+# sentence-transformers
+# faiss-cpu

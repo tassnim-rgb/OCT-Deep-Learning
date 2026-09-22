@@ -1,0 +1,46 @@
+# ── Python ────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+.eggs/
+*.egg-info/
+.ipynb_checkpoints/
+
+# ── Virtual environments ──────────────────────────────────────────────────
+oct_env/
+venv/
+.venv/
+env/
+
+# ── Datasets & patient data (never commit) ────────────────────────────────
+OCT2017/
+octc8/
+octid/
+data/
+datasets/
+
+# ── Model weights / checkpoints ───────────────────────────────────────────
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.h5
+*.safetensors
+
+# ── Runtime-generated data (contains scan thumbnails + results) ───────────
+webui/history.json
+
+# ── Secrets / credentials ─────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+
+# ── OS / editor ───────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

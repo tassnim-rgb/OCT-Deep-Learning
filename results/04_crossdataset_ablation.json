@@ -1,0 +1,340 @@
+{
+  "octc8_n": 1400,
+  "octc8_ablations": {
+    "classifier_only": {
+      "accuracy": 0.9843,
+      "macro_f1": 0.9843,
+      "per_class": {
+        "CNV": {
+          "precision": 0.9801,
+          "recall": 0.9829,
+          "f1": 0.9815
+        },
+        "DME": {
+          "precision": 0.9913,
+          "recall": 0.9771,
+          "f1": 0.9842
+        },
+        "DRUSEN": {
+          "precision": 0.9829,
+          "recall": 0.9829,
+          "f1": 0.9829
+        },
+        "NORMAL": {
+          "precision": 0.9831,
+          "recall": 0.9943,
+          "f1": 0.9886
+        }
+      },
+      "n": 1400
+    },
+    "zoom_guarded": {
+      "accuracy": 0.9836,
+      "macro_f1": 0.9836,
+      "per_class": {
+        "CNV": {
+          "precision": 0.9745,
+          "recall": 0.9829,
+          "f1": 0.9787
+        },
+        "DME": {
+          "precision": 0.9913,
+          "recall": 0.9743,
+          "f1": 0.9827
+        },
+        "DRUSEN": {
+          "precision": 0.9829,
+          "recall": 0.9829,
+          "f1": 0.9829
+        },
+        "NORMAL": {
+          "precision": 0.9858,
+          "recall": 0.9943,
+          "f1": 0.99
+        }
+      },
+      "n": 1400
+    },
+    "zoom_margin": {
+      "accuracy": 0.9836,
+      "macro_f1": 0.9836,
+      "per_class": {
+        "CNV": {
+          "precision": 0.9745,
+          "recall": 0.9829,
+          "f1": 0.9787
+        },
+        "DME": {
+          "precision": 0.9913,
+          "recall": 0.9743,
+          "f1": 0.9827
+        },
+        "DRUSEN": {
+          "precision": 0.9829,
+          "recall": 0.9829,
+          "f1": 0.9829
+        },
+        "NORMAL": {
+          "precision": 0.9858,
+          "recall": 0.9943,
+          "f1": 0.99
+        }
+      },
+      "n": 1400
+    },
+    "zoom_baseline": {
+      "accuracy": 0.4043,
+      "macro_f1": 0.3564,
+      "per_class": {
+        "CNV": {
+          "precision": 0.2982,
+          "recall": 0.9771,
+          "f1": 0.4569
+        },
+        "DME": {
+          "precision": 0.8025,
+          "recall": 0.1857,
+          "f1": 0.3016
+        },
+        "DRUSEN": {
+          "precision": 0.9521,
+          "recall": 0.3971,
+          "f1": 0.5605
+        },
+        "NORMAL": {
+          "precision": 0.7692,
+          "recall": 0.0571,
+          "f1": 0.1064
+        }
+      },
+      "n": 1400
+    }
+  },
+  "octc8_all_n": 2800,
+  "octc8_all_semantic": {
+    "classifier_only": {
+      "accuracy": 0.7693,
+      "macro_f1": 0.7626,
+      "per_class": {
+        "CNV": {
+          "precision": 0.8351,
+          "recall": 0.8105,
+          "f1": 0.8226
+        },
+        "DME": {
+          "precision": 0.7143,
+          "recall": 0.8714,
+          "f1": 0.7851
+        },
+        "DRUSEN": {
+          "precision": 0.7633,
+          "recall": 0.4929,
+          "f1": 0.599
+        },
+        "NORMAL": {
+          "precision": 0.7326,
+          "recall": 0.9943,
+          "f1": 0.8436
+        }
+      },
+      "n": 2800
+    },
+    "zoom_guarded": {
+      "accuracy": 0.7711,
+      "macro_f1": 0.7649,
+      "per_class": {
+        "CNV": {
+          "precision": 0.826,
+          "recall": 0.8181,
+          "f1": 0.822
+        },
+        "DME": {
+          "precision": 0.7218,
+          "recall": 0.8671,
+          "f1": 0.7878
+        },
+        "DRUSEN": {
+          "precision": 0.7667,
+          "recall": 0.4929,
+          "f1": 0.6
+        },
+        "NORMAL": {
+          "precision": 0.742,
+          "recall": 0.9943,
+          "f1": 0.8498
+        }
+      },
+      "n": 2800
+    },
+    "zoom_margin": {
+      "accuracy": 0.7711,
+      "macro_f1": 0.7649,
+      "per_class": {
+        "CNV": {
+          "precision": 0.826,
+          "recall": 0.8181,
+          "f1": 0.822
+        },
+        "DME": {
+          "precision": 0.7218,
+          "recall": 0.8671,
+          "f1": 0.7878
+        },
+        "DRUSEN": {
+          "precision": 0.7667,
+          "recall": 0.4929,
+          "f1": 0.6
+        },
+        "NORMAL": {
+          "precision": 0.742,
+          "recall": 0.9943,
+          "f1": 0.8498
+        }
+      },
+      "n": 2800
+    },
+    "zoom_baseline": {
+      "accuracy": 0.4796,
+      "macro_f1": 0.3486,
+      "per_class": {
+        "CNV": {
+          "precision": 0.4436,
+          "recall": 0.941,
+          "f1": 0.603
+        },
+        "DME": {
+          "precision": 0.5357,
+          "recall": 0.2786,
+          "f1": 0.3665
+        },
+        "DRUSEN": {
+          "precision": 0.8383,
+          "recall": 0.2,
+          "f1": 0.323
+        },
+        "NORMAL": {
+          "precision": 0.4762,
+          "recall": 0.0571,
+          "f1": 0.102
+        }
+      },
+      "n": 2800
+    }
+  },
+  "kermany_uncertain": {
+    "n": 100,
+    "mean_conf": 0.9374,
+    "mean_margin": 0.9027,
+    "classifier_only": {
+      "accuracy": 0.97,
+      "macro_f1": 0.7399,
+      "per_class": {
+        "CNV": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "DME": {
+          "precision": 1.0,
+          "recall": 0.9375,
+          "f1": 0.9677
+        },
+        "DRUSEN": {
+          "precision": 1.0,
+          "recall": 0.9839,
+          "f1": 0.9919
+        },
+        "NORMAL": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "n": 100
+    },
+    "zoom_guarded": {
+      "accuracy": 0.97,
+      "macro_f1": 0.7399,
+      "per_class": {
+        "CNV": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "DME": {
+          "precision": 1.0,
+          "recall": 0.9375,
+          "f1": 0.9677
+        },
+        "DRUSEN": {
+          "precision": 1.0,
+          "recall": 0.9839,
+          "f1": 0.9919
+        },
+        "NORMAL": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "n": 100
+    },
+    "zoom_margin": {
+      "accuracy": 0.97,
+      "macro_f1": 0.7399,
+      "per_class": {
+        "CNV": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "DME": {
+          "precision": 1.0,
+          "recall": 0.9375,
+          "f1": 0.9677
+        },
+        "DRUSEN": {
+          "precision": 1.0,
+          "recall": 0.9839,
+          "f1": 0.9919
+        },
+        "NORMAL": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "n": 100
+    },
+    "zoom_baseline": {
+      "accuracy": 0.33,
+      "macro_f1": 0.2134,
+      "per_class": {
+        "CNV": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "DME": {
+          "precision": 0.8,
+          "recall": 0.125,
+          "f1": 0.2162
+        },
+        "DRUSEN": {
+          "precision": 1.0,
+          "recall": 0.4677,
+          "f1": 0.6374
+        },
+        "NORMAL": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "n": 100
+    }
+  },
+  "agent_ablation_octc8": {
+    "status": "SKIPPED \u2014 set CEREBRAS_API_KEY to run LLM ablation"
+  }
+}

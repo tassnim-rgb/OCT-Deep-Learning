@@ -1,0 +1,25 @@
+{
+  "saved": {
+    "p1": 0.8125,
+    "p3": 0.8125,
+    "per_class_p1": {
+      "CNV": 100.0,
+      "DME": 50.0,
+      "DRUSEN": 75.0,
+      "NORMAL": 100.0
+    }
+  },
+  "triplet": {
+    "p1": 0.6875,
+    "p3": 0.6875,
+    "per_class_p1": {
+      "CNV": 75.0,
+      "DME": 25.0,
+      "DRUSEN": 75.0,
+      "NORMAL": 100.0
+    },
+    "best_loss": 0.00018142151017474313
+  },
+  "delta_p3_pp": -0.125,
+  "artifact": "/home/nebula/projects/results/retrieval_encoder_xl_v2.pth"
+}
