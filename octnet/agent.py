@@ -26,6 +26,36 @@ from .data import build_infer_tf
 from .retrieval import Retriever
 
 
+def _load_env_file(path: str) -> None:
+    """Minimal stdlib .env loader (KEY=VALUE, '#' comments, optional quotes).
+
+    Never overrides variables already set in the real environment, so a
+    key exported in the shell takes precedence over a local .env file.
+    """
+    try:
+        with open(path, "r", encoding="utf-8") as fh:
+            for line in fh:
+                line = line.strip()
+                if not line or line.startswith("#") or "=" not in line:
+                    continue
+                line = line[7:] if line.startswith("export ") else line
+                key, _, value = line.partition("=")
+                key = key.strip()
+                if not key:
+                    continue
+                value = value.strip().strip('"').strip("'")
+                if key and key not in os.environ:
+                    os.environ[key] = value
+    except OSError:
+        pass
+
+
+# Keys may come from a gitignored .env at the project root (or cwd), or from
+# the shell environment. Real shell env always wins.
+_load_env_file(os.path.join(os.path.dirname(__file__), "..", ".env"))
+_load_env_file(".env")
+
+
 # ═══════════════════════════════ Tools ═══════════════════════════════════
 
 def make_tools(model, cam_fn, retriever: Retriever | None,
