@@ -55,11 +55,14 @@
       </p>
       <p class="techline">OCT Workbench · inference powered by the <code>octnet</code> pipeline
         (from-scratch OCTNet classifier, Grad-CAM++, guarded zoom-and-reanalyze,
-        contrastive retrieval) · no API keys required. <strong>Hosted demo is frontend only:
-        OCT inference runs on the local Python backend (<code>python app_webui.py</code>).</strong></p>
+        contrastive retrieval) · no API keys required. <strong>On this hosted demo the models
+        run in your browser; the same page also works on your machine with
+        <code>python app_webui.py</code>.</strong></p>
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web@1.20.0/dist/ort.min.js" defer></script>
+  <script src="infer.js" defer></script>
   <script src="app.js" defer></script>
 </body>
 </html>

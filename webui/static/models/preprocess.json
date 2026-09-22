@@ -1,0 +1,30 @@
+{
+ "img_size": 224,
+ "num_classes": 4,
+ "class_names": [
+  "CNV",
+  "DME",
+  "DRUSEN",
+  "NORMAL"
+ ],
+ "mean": 0.5,
+ "std": 0.5,
+ "max_side": 512,
+ "top_k": 3,
+ "zoom": {
+  "confidence_gate": 0.75,
+  "min_crop_area_frac": 0.15,
+  "blend_alpha": 0.6,
+  "cam_threshold": 0.4,
+  "padding_frac": 0.1
+ },
+ "overlay": {
+  "alpha": 0.55,
+  "rect_rgb": [
+   255,
+   255,
+   0
+  ],
+  "rect_width": 3
+ }
+}

@@ -113,15 +113,30 @@ routing, relative asset paths, and a `.nojekyll` marker, so it deploys to any
 GitHub Pages project URL with no build step. The workflow
 `.github/workflows/pages.yml` deploys `webui/static/` on every push to `main`.
 
-**Live demo: `https://tassnim-rgb.github.io/OCT-Deep-Learning/`**
+**Live demo: `https://tassnim-rgb.github.io/OCT-Deep-Learning/` — the hosted demo
+runs real inference in your browser (WebAssembly).**
 
-**The hosted demo is frontend-only and intentional.** OCT inference needs the
-PyTorch pipeline and the trained weights, which live on the local machine and
-are deliberately gitignored (never committed). The deployed frontend therefore
-shows the full UI and, where a result would appear, explains that the inference
-backend is not connected. It never fabricates predictions.
+The same models that power the local pipeline are exported to ONNX
+(`webui/static/models/`: classifier, analytic-gradient Grad-CAM++, retrieval
+encoder, precomputed corpus embeddings) and executed in-browser with
+`onnxruntime-web` (loaded from a pinned CDN). This is the actual pipeline, not a
+placeholder: it reproduces the Python outputs (inputs, Grad-CAM++ heatmap,
+guarded zoom-and-reanalyze, retrieval, result schema) to ~1e-6, with no
+backend, API keys, or image uploads. The exported graphs are generated and
+numerically validated against PyTorch by `webui/export_onnx.py`.
 
-To get real inference, run the backend yourself:
+How the page decides where to run:
+
+* **Local backend reachable** → the app uses the Python API
+  (`python app_webui.py`, `http://127.0.0.1:7861`) — the gold-standard pipeline.
+* **Hosted (no backend)** → the app auto-detects this and runs the ONNX engine
+  in the browser instead; history is kept in `localStorage`.
+
+The frontend never invents results: both paths produce identical JSON from the
+real models. If the model runtime cannot load (no network for the CDN), the UI
+says so honestly and offers the local option.
+
+To get the Python backend yourself:
 
 ```bash
 python app_webui.py        # http://127.0.0.1:7861  (OCT Workbench UI + API)
@@ -133,7 +148,9 @@ Fly.io, Hugging Face Spaces, or any small VPS), deploy `app_webui.py` as-is:
 the API is stdlib-only (no FastAPI/Flask dependency) and calls
 `octnet/predict.py`, so it ports cleanly. You must place the gitignored weights
 (`oct_best.pth`, `retrieval_encoder.pth`) and dataset on that server — they are
-not in the repository.
+not in the repository. The small ONNX assets in `webui/static/models/` *are*
+committed on purpose: they are what make the hosted demo work, and consent was
+given to publish them.
 
 The agent drives an LLM only when an endpoint is configured; otherwise it runs a
 deterministic offline pipeline (classify → localize → gated zoom → retrieval →

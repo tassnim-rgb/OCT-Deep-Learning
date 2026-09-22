@@ -20,11 +20,47 @@ const CLASS_META = {
 const ACCEPTED = ["image/png", "image/jpeg", "image/bmp", "image/tiff", "image/webp"];
 const ACCEPTED_EXT = ["png", "jpg", "jpeg", "bmp", "tif", "tiff", "webp"];
 
-// Set when this page is hosted without the Python backend (e.g. GitHub Pages).
-// The frontend never invents results: if the API is unreachable it says so.
-const BACKEND_OFFLINE = "The inference backend is not connected on this hosted demo. " +
-  "Analysis is not faked, so nothing runs here. Locally, start it with python app_webui.py.";
+// The app runs against the local Python backend when reachable, otherwise it
+// switches to the in-browser engine (infer.js + onnxruntime-web). Both paths
+// run the same models and produce the same JSON; nothing is ever faked.
+const BACKEND_OFFLINE = "No inference engine is available right now. The hosted demo runs the " +
+  "models in your browser, so a connection to load the model runtime is required. " +
+  "Locally, start the backend with python app_webui.py.";
 const isOfflineError = (res) => !res || res.status === 404 || res.status === 405 || res.status === 502;
+
+let backendMode = null; // null (unknown) | "server" | "browser"
+
+async function detectBackend() {
+  if (backendMode) return backendMode;
+  try {
+    const ctrl = new AbortController();
+    const t = setTimeout(() => ctrl.abort(), 4000);
+    const res = await fetch("api/status", { signal: ctrl.signal });
+    clearTimeout(t);
+    backendMode = res.ok ? "server" : "browser";
+  } catch {
+    backendMode = "browser";
+  }
+  return backendMode;
+}
+
+const hasBrowserEngine = () => typeof OCTInfer !== "undefined";
+
+async function runBrowserAnalyze(file, signal) {
+  if (!hasBrowserEngine()) throw new Error(BACKEND_OFFLINE);
+  const aborted = () => {
+    const e = new Error("Analysis was cancelled.");
+    e.name = "AbortError";
+    return e;
+  };
+  if (signal && signal.aborted) throw aborted();
+  await OCTInfer.init((msg) => {
+    const t = el("#sweep-text");
+    if (t) t.textContent = msg;
+  });
+  if (signal && signal.aborted) throw aborted();
+  return OCTInfer.apiAnalyze(file);
+}
 
 const badge = (cls) => {
   const m = CLASS_META[cls] || { color: "#64748B", friendly: cls };
@@ -51,24 +87,36 @@ function applyTheme() {
 /* ═══════════════ API ═══════════════ */
 
 async function apiAnalyze(file, signal) {
+  if ((await detectBackend()) === "browser" && hasBrowserEngine()) {
+    return runBrowserAnalyze(file, signal);
+  }
   const fd = new FormData();
   fd.append("file", file, file.name);
   let res;
   try {
     res = await fetch("api/analyze", { method: "POST", body: fd, signal });
   } catch {
+    backendMode = "browser";
+    if (hasBrowserEngine()) return runBrowserAnalyze(file, signal);
     throw new Error(BACKEND_OFFLINE);
   }
   const json = await res.json().catch(() => ({}));
-  if (!res.ok) throw new Error(isOfflineError(res) ? BACKEND_OFFLINE : (json.error || `Server error (${res.status})`));
+  if (isOfflineError(res)) {
+    backendMode = "browser";
+    if (hasBrowserEngine()) return runBrowserAnalyze(file, signal);
+  }
+  if (!res.ok) throw new Error(json.error || `Server error (${res.status})`);
   return json.result;
 }
 
 async function apiHistory() {
+  if ((await detectBackend()) === "browser" && hasBrowserEngine()) return OCTInfer.apiHistory();
   let res;
   try {
     res = await fetch("api/history");
   } catch {
+    backendMode = "browser";
+    if (hasBrowserEngine()) return OCTInfer.apiHistory();
     return { offline: true, entries: [] };
   }
   const json = await res.json().catch(() => ({}));
@@ -77,14 +125,23 @@ async function apiHistory() {
 }
 
 async function apiResult(id) {
+  if ((await detectBackend()) === "browser" && hasBrowserEngine()) return OCTInfer.apiResult(id);
   let res;
   try {
     res = await fetch(`api/result?id=${encodeURIComponent(id)}`);
   } catch {
+    backendMode = "browser";
+    if (hasBrowserEngine()) return OCTInfer.apiResult(id);
     throw new Error(BACKEND_OFFLINE);
   }
   const json = await res.json().catch(() => ({}));
-  if (!res.ok) throw new Error(isOfflineError(res) ? BACKEND_OFFLINE : (json.error || "Result not found"));
+  if (!res.ok) {
+    if (isOfflineError(res)) {
+      backendMode = "browser";
+      if (hasBrowserEngine()) return OCTInfer.apiResult(id);
+    }
+    throw new Error(json.error || "Result not found");
+  }
   return json.entry;
 }
 
@@ -189,9 +246,9 @@ async function renderRecent() {
   try {
     const { offline, entries } = await apiHistory();
     if (offline) {
-      box.innerHTML = `<div class="empty"><strong>Backend not connected</strong>
-        This hosted page is a static frontend only. Run <code>python app_webui.py</code>
-        locally and recent analyses will appear here.</div>`;
+      box.innerHTML = `<div class="empty"><strong>History unavailable</strong>
+        Analysis history could not be loaded right now. Results from new analyses
+        will appear here.</div>`;
       return;
     }
     if (!entries.length) {
@@ -263,8 +320,7 @@ function renderAnalyze() {
         <li>A guarded zoom re-checks the highlighted area when the model is unsure.</li>
         <li>Reference notes are retrieved for the predicted condition.</li>
       </ol>
-      <p class="hero-note" style="margin-top:14px">Runs entirely on this machine. Your image is
-      not sent to any external service.</p>
+      <p class="hero-note" style="margin-top:14px" id="engine-note">Checking analysis engine…</p>
     </aside>
   </section>`;
 }
@@ -275,6 +331,14 @@ function setupAnalyze() {
   const status = el("#analyze-status");
   const pane = el("#file-pane");
   let currentFile = null;
+
+  detectBackend().then(() => {
+    const note = el("#engine-note");
+    if (!note) return;
+    note.textContent = backendMode === "browser"
+      ? "Analysis runs in your browser on this page (WebAssembly). Your image is never uploaded."
+      : "Analysis runs on the local Python backend on this machine. Your image is not sent to any external service.";
+  });
 
   for (const evt of ["dragenter", "dragover"]) {
     dz.addEventListener(evt, (e) => { e.preventDefault(); dz.classList.add("drag"); });

@@ -24,6 +24,9 @@ datasets/
 *.pt
 *.ckpt
 *.onnx
+# Browser-inference ONNX assets ARE committed on purpose (they power the
+# GitHub Pages demo; consent obtained). All other *.onnx stay ignored.
+!webui/static/models/*.onnx
 *.h5
 *.safetensors
 
