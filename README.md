@@ -26,7 +26,45 @@ a structured diagnostic impression.
                      └─────────────────────────────────────────────┘
 ```
 
-## Repository layout
+## Problem
+
+OCT B-scan grading is manual, slow, and operator-dependent, and a plain
+classifier returns a single label with no evidence a clinician can check. This
+project treats OCT diagnosis as an *interpretable pipeline problem*: locate the
+region of interest (Grad-CAM++), zoom and re-analyze it under a safety gate,
+retrieve supporting reference notes from a clinical corpus, and let an LLM
+synthesize a structured diagnostic impression, or run the identical pipeline
+deterministically without any LLM.
+
+## Approach
+
+Five specialist tools, orchestrated by an agent loop but fully runnable
+offline. Every vision and retrieval component is trained from scratch on the
+public research datasets below, with no pretrained weights:
+
+1. **Tool 1, classify** - OCTNet, a compact from-scratch CNN (1.24M params).
+2. **Tool 2, localize** - analytic Grad-CAM++ heatmap for the pathological region.
+3. **Tool 3, zoom-and-reanalyze** - crop the ROI and re-classify under a
+   confidence/`margin` gate that decides *when zooming is safe*
+   (guarded policy: skip when the first pass is confident).
+4. **Tool 4, retrieve** - a small sentence encoder (NT-Xent + triplet training)
+   maps the scan and free-text queries to 133 curated reference notes.
+5. **Tool 5, synthesize** - an LLM (any OpenAI-compatible endpoint, key from env
+   only) writes the diagnostic impression from the tool outputs; without a key,
+   a deterministic offline summarizer produces the same structured fields.
+
+## Dataset
+
+- **OCT2017 / Kermany** - public OCT B-scan benchmark, 4 classes
+  (CNV, DME, DRUSEN, NORMAL), `train/` + `test/` ImageFolder layout
+  (balanced 1000-image test set). Trains Tools 1-3.
+- **OCT-C8** - public 8-class OCT benchmark used as a cross-domain stress test
+  (shared 4-class subset 1400 images; all-classes interpretive subset 2800).
+- **OCTID** - public OCT benchmark (CSR/DR/MH/NORMAL) remapped onto the model's
+  4 classes via an *interpretive* pathology mapping; treated as a transfer
+  stress test, not literal class identity (see `octnet/data.py::_load_mapped`).
+
+Repository layout
 
 ```
 projects/
@@ -185,6 +223,13 @@ all**.
 | `retrieval_encoder.pth` | retrieval encoder (from scratch, trained on 133-entry XL corpus) | ✓ vocab 784 matches `oct_corpus_xl.json` |
 | `oct_corpus_xl.json` | 133 reference entries (CNV 35 · DME 31 · DRUSEN 27 · NORMAL 22 · DIFFERENTIAL 18) | ✓ used by agent Tool 4 |
 
+## Documentation
+
+- `docs/REPORT.md` - full technical report (formulation, training, results,
+  limitations, reproducibility).
+- `docs/diagrams.md` - pipeline, deployment, and decision-flow diagrams
+  (Mermaid).
+
 ## Key results (measured by `experiments/`, see `results/*.json`)
 
 **Zoom-and-reanalyze trade-off** (Tool 3) — measured on the full balanced
@@ -258,3 +303,38 @@ epochs). Full numbers in `results/01_transfer_baseline.json`.
   environment only; the apps accept a key in memory for the session.
 - Run-to-run variance: seeds are pinned (`SEED=42`) per experiment; multi-GPU
   nondeterminism can still shift ±0.05 pp.
+
+## Reproducibility
+
+- Every experiment is a script under `experiments/` that writes JSON metrics to
+  `results/`; seeds are pinned (`SEED=42`, torch/cuda/numpy at
+  `octnet/config.py`).
+- The pipeline is deterministic end to end; the exported ONNX graphs are
+  numerically validated against PyTorch by `webui/export_onnx.py`.
+- Weights are gitignored by design (`oct_best.pth`, `retrieval_encoder.pth`,
+  datasets live outside the repo; see `.env.example` for paths). The ONNX
+  artifacts in `webui/static/models/` are committed on purpose so the hosted
+  demo runs real inference with no backend.
+
+## Future Work
+
+- Validate on an independent, de-duplicated test set (the OCT2017 train set is
+  known to contain near-duplicates of the test set, so reported accuracies are
+  upper bounds).
+- A clinician study of whether the ROI visualization and retrieval evidence
+  actually improve human grading decisions.
+- The margin gate adds nothing over guarded on current data; test it on larger
+  out-of-distribution collections before deciding whether to keep it.
+- Extend the in-browser ONNX engine (zoom TTA, DICOM loading) as an exercise in
+  fully client-side medical-imaging inference.
+
+## References
+
+1. D. S. Kermany et al., "Identifying Medical Diagnoses and Treatable Diseases
+   by Image-Based Deep Learning," *Cell*, 172(5):1122-1131, 2018 (OCT2017).
+2. A. Chattopadhay et al., "Grad-CAM++: Generalized Gradient-Based Visual
+   Explanations for Deep Convolutional Networks," *WACV*, 2018.
+3. T. Chen et al., "A Simple Framework for Contrastive Learning of Visual
+   Representations" (NT-Xent objective), *ICML*, 2020.
+4. OCT-C8 and OCTID are public research benchmarks (folder layouts documented in
+   `octnet/data.py`); OCTID labels are used with an interpretive mapping only.

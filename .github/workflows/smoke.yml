@@ -1,0 +1,50 @@
+name: pages-smoke
+
+# Honest smoke test of the live GitHub Pages demo.
+# Runs on a schedule and manually; does NOT deploy anything.
+# Fails if any core asset of the hosted demo stops returning 200.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 4 * * *"   # daily 04:17 UTC
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check core live assets
+        run: |
+          base="https://tassnim-rgb.github.io/OCT-Deep-Learning"
+          assets=(
+            "/"
+            "/index.html"
+            "/app.js"
+            "/infer.js"
+            "/models/classify.onnx"
+            "/models/cam.onnx"
+            "/models/encoder.onnx"
+            "/models/corpus.json"
+            "/models/tokenizer.json"
+            "/models/preprocess.json"
+            "/models/jet.json"
+          )
+          fail=0
+          for a in "${assets[@]}"; do
+            code=$(curl -s -o /dev/null -w "%{http_code}" -m 30 "${base}${a}")
+            echo "$code  ${a}"
+            if [ "$code" != "200" ]; then fail=1; fi
+          done
+          # The hosted page must be in browser (backend-offline) mode:
+          # /api/status must NOT be a live backend.
+          code=$(curl -s -o /dev/null -w "%{http_code}" -m 30 "${base}/api/status")
+          echo "$code  /api/status (expected 404, i.e. no backend)"
+          if [ "$code" = "200" ]; then fail=1; fi
+          if [ "$fail" != "0" ]; then
+            echo "::error::Live demo smoke test failed (see asset codes above)"
+            exit 1
+          fi
+          echo "Live demo smoke test OK"
