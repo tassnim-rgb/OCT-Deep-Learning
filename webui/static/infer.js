@@ -270,7 +270,7 @@
   async function runCam(tensor, cls, size) {
     const feeds = {
       image: new global.ort.Tensor("float32", tensor, [1, 3, size, size]),
-      cls: new global.ort.Tensor("int64", BigInt64Array([BigInt(cls)]), [1]),
+      cls: new global.ort.Tensor("int64", new BigInt64Array([BigInt(cls)]), [1]),
     };
     const { cam } = await state.sess.cam.run(feeds);
     return new Float32Array(cam.data);              // 14x14, normalized 0..1
@@ -343,7 +343,7 @@
   async function retrieve(query, topK) {
     const ids = tokenize(query);
     const feeds = {
-      ids: new global.ort.Tensor("int64", BigInt64Array(ids.map(BigInt)), [1, state.vocab.max_len]),
+      ids: new global.ort.Tensor("int64", new BigInt64Array(ids.map(BigInt)), [1, state.vocab.max_len]),
     };
     const { emb } = await state.sess.encoder.run(feeds);
     const q = emb.data;
